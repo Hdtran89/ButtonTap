@@ -7,7 +7,7 @@
 //
 
 #import "TouchTheButtonViewController.h"
-#import <Parse/Parse.h>
+
 
 @interface TouchTheButtonViewController ()
 - (IBAction)redButton:(id)sender;
@@ -72,8 +72,8 @@
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Time is up!!"
                                                         message:[NSString stringWithFormat:@"Your score is: %i",count]
                                                        delegate:self
-                                              cancelButtonTitle:@"Play Again"
-                                              otherButtonTitles:@"Back to Save Score",@"Main Menu",nil];
+                                              cancelButtonTitle:@"Try Again"
+                                              otherButtonTitles:@"Next Level",@"Main Menu",nil];
         [alert show];
     }
     
@@ -81,11 +81,16 @@
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     
-    switch (buttonIndex) {
+    switch (buttonIndex)
+    {
         case 0:
             [self gamePlay];
             break;
         case 1:
+            if (count == 100)
+            {
+                
+            }
             break;
         case 2:
             [self dismissModalViewControllerAnimated:YES];
