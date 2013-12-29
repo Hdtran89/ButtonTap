@@ -10,8 +10,6 @@
 
 @interface TouchTheButtonViewController ()
 - (IBAction)redButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *timer;
-@property (weak, nonatomic) IBOutlet UILabel *scoreCounter;
 
 @end
 
@@ -42,23 +40,27 @@
 - (IBAction)redButton:(id)sender
 {
     count++;
-    _scoreCounter.text = [NSString stringWithFormat:@"Score: %li", count];
+    scoreCounter.text = [NSString stringWithFormat:@"Score: %li", count];
 }
 -(void)gamePlay
 {
     seconds = 30;
     count = 0;
     
-    _timer.text = [NSString stringWithFormat:@"Timer: %li",seconds];
-    _scoreCounter.text = [NSString stringWithFormat:@"Score: %li", count];
+    time.text = [NSString stringWithFormat:@"Time: %li",seconds];
+    scoreCounter.text = [NSString stringWithFormat:@"Score: %li", count];
     
-    
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                             target:self
+                                           selector:@selector(subtractTime)
+                                           userInfo:Nil
+                                            repeats:YES];
     
 }
 -(void)subtractTime
 {
     seconds--;
-    _timer.text = [NSString stringWithFormat:@"Timer: %li", seconds];
+    time.text = [NSString stringWithFormat:@"Time: %li", seconds];
     
     if (seconds == 0)
     {
@@ -68,14 +70,25 @@
                                                         message:[NSString stringWithFormat:@"Your score is: %li",count]
                                                        delegate:self
                                               cancelButtonTitle:@"Play Again"
-                                              otherButtonTitles:@"Go Back", nil];
+                                              otherButtonTitles:@"Main Menu",
+                                                                @"Record Score",nil];
         [alert show];
     }
     
 }
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    [self gamePlay];
+    switch (buttonIndex) {
+        case 0:
+            [self gamePlay];
+            break;
+        case 1:
+            [self dismissModalViewControllerAnimated:YES];
+        case 2:
+            [self ]
+        default:
+            break;
+    }
 }
 
 

@@ -154,7 +154,7 @@
                                     <action selector="redButton:" destination="jBF-Vl-VgD" eventType="touchUpInside" id="rMC-Dj-mPF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time: 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-3w-urm">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer: 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-3w-urm">
                                 <rect key="frame" x="106" y="107" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -172,6 +172,7 @@
                     <navigationItem key="navigationItem" id="bb8-nt-Woh"/>
                     <connections>
                         <outlet property="scoreCounter" destination="BU3-Ui-p1h" id="i7d-tB-s2s"/>
+                        <outlet property="time" destination="gPc-3w-urm" id="sMo-Rb-lSQ"/>
                         <outlet property="timer" destination="gPc-3w-urm" id="UHG-Zl-YZf"/>
                     </connections>
                 </viewController>

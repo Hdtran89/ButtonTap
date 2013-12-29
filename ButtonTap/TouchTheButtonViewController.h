@@ -10,6 +10,8 @@
 
 @interface TouchTheButtonViewController : UIViewController
 {
+    IBOutlet UILabel *scoreCounter;
+    IBOutlet UILabel *time;
     NSInteger count;
     NSInteger seconds;
     NSTimer * timer;
@@ -17,5 +19,6 @@
 }
 -(void)subtractTime;
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
--(void)subtractTime;
+-(void)gamePlay;
+-(IBAction)redButton:(id)sender;
 @end
