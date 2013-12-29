@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E324305A186F80A000B8E43A /* TouchTheButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3243059186F80A000B8E43A /* TouchTheButtonViewController.m */; };
 		E324305D186F80F100B8E43A /* HighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E324305C186F80F100B8E43A /* HighScoreViewController.m */; };
+		E37852CF186FE18F00E148DA /* Highscore.m in Sources */ = {isa = PBXBuildFile; fileRef = E37852CE186FE18F00E148DA /* Highscore.m */; };
+		E37852D1186FE55700E148DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37852D0186FE55700E148DA /* Parse.framework */; };
 		E3E63A4818611CEC004E0553 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4718611CEC004E0553 /* Foundation.framework */; };
 		E3E63A4A18611CEC004E0553 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4918611CEC004E0553 /* CoreGraphics.framework */; };
 		E3E63A4C18611CEC004E0553 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4B18611CEC004E0553 /* UIKit.framework */; };
@@ -40,6 +42,9 @@
 		E3243059186F80A000B8E43A /* TouchTheButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchTheButtonViewController.m; sourceTree = "<group>"; };
 		E324305B186F80F100B8E43A /* HighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreViewController.h; sourceTree = "<group>"; };
 		E324305C186F80F100B8E43A /* HighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreViewController.m; sourceTree = "<group>"; };
+		E37852CD186FE18F00E148DA /* Highscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Highscore.h; path = modal/Highscore.h; sourceTree = "<group>"; };
+		E37852CE186FE18F00E148DA /* Highscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Highscore.m; path = modal/Highscore.m; sourceTree = "<group>"; };
+		E37852D0186FE55700E148DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E3E63A4418611CEC004E0553 /* ButtonTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E63A4718611CEC004E0553 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3E63A4918611CEC004E0553 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,6 +72,7 @@
 			files = (
 				E3E63A4A18611CEC004E0553 /* CoreGraphics.framework in Frameworks */,
 				E3E63A4C18611CEC004E0553 /* UIKit.framework in Frameworks */,
+				E37852D1186FE55700E148DA /* Parse.framework in Frameworks */,
 				E3E63A4818611CEC004E0553 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +130,7 @@
 		E3E63A4618611CEC004E0553 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E37852D0186FE55700E148DA /* Parse.framework */,
 				E3E63A4718611CEC004E0553 /* Foundation.framework */,
 				E3E63A4918611CEC004E0553 /* CoreGraphics.framework */,
 				E3E63A4B18611CEC004E0553 /* UIKit.framework */,
@@ -154,6 +161,8 @@
 				E3E63A5018611CEC004E0553 /* InfoPlist.strings */,
 				E3E63A5318611CEC004E0553 /* main.m */,
 				E3E63A5518611CEC004E0553 /* ButtonTap-Prefix.pch */,
+				E37852CD186FE18F00E148DA /* Highscore.h */,
+				E37852CE186FE18F00E148DA /* Highscore.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 				E3E63A5818611CEC004E0553 /* AppDelegate.m in Sources */,
 				E324305A186F80A000B8E43A /* TouchTheButtonViewController.m in Sources */,
 				E3E63A5418611CEC004E0553 /* main.m in Sources */,
+				E37852CF186FE18F00E148DA /* Highscore.m in Sources */,
 				E324305D186F80F100B8E43A /* HighScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +424,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/watdahieu/Documents/iphone_program/ButtonTap,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ButtonTap/ButtonTap-Prefix.pch";
 				INFOPLIST_FILE = "ButtonTap/ButtonTap-Info.plist";
@@ -427,6 +441,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/watdahieu/Documents/iphone_program/ButtonTap,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ButtonTap/ButtonTap-Prefix.pch";
 				INFOPLIST_FILE = "ButtonTap/ButtonTap-Info.plist";

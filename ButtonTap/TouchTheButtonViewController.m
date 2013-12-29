@@ -7,6 +7,7 @@
 //
 
 #import "TouchTheButtonViewController.h"
+#import <Parse/Parse.h>
 
 @interface TouchTheButtonViewController ()
 - (IBAction)redButton:(id)sender;
@@ -41,7 +42,7 @@
 - (IBAction)redButton:(id)sender
 {
     count++;
-    scoreCounter.text = [NSString stringWithFormat:@"Score: %li", count];
+    scoreCounter.text = [NSString stringWithFormat:@"Score: %i", count];
 
 }
 -(void)gamePlay
@@ -50,7 +51,7 @@
     count = 0;
     
     time.text = [NSString stringWithFormat:@"Time: %li",seconds];
-    scoreCounter.text = [NSString stringWithFormat:@"Score: %li", count];
+    scoreCounter.text = [NSString stringWithFormat:@"Score: %i", count];
     
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                              target:self
@@ -69,7 +70,7 @@
         [timer invalidate];
         
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Time is up!!"
-                                                        message:[NSString stringWithFormat:@"Your score is: %li",count]
+                                                        message:[NSString stringWithFormat:@"Your score is: %i",count]
                                                        delegate:self
                                               cancelButtonTitle:@"Play Again"
                                               otherButtonTitles:@"Back to Save Score",@"Main Menu",nil];

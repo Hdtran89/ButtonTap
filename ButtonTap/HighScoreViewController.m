@@ -8,6 +8,7 @@
 
 #import "HighScoreViewController.h"
 #import "TouchTheButtonViewController.h"
+#import <Parse/Parse.h>
 
 @interface HighScoreViewController ()
 @property(strong,nonatomic)NSMutableArray *saveHighscore;
