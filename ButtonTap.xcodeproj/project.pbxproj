@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E324305A186F80A000B8E43A /* TouchTheButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3243059186F80A000B8E43A /* TouchTheButtonViewController.m */; };
+		E35DD6921870D2DB002A4C88 /* BTbackgroundimages.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E35DD68F1870D2DB002A4C88 /* BTbackgroundimages.jpg */; };
+		E35DD6931870D2DB002A4C88 /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E35DD6901870D2DB002A4C88 /* red_button.png */; };
+		E35DD6941870D2DB002A4C88 /* whitebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = E35DD6911870D2DB002A4C88 /* whitebutton.png */; };
 		E3E63A4818611CEC004E0553 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4718611CEC004E0553 /* Foundation.framework */; };
 		E3E63A4A18611CEC004E0553 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4918611CEC004E0553 /* CoreGraphics.framework */; };
 		E3E63A4C18611CEC004E0553 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4B18611CEC004E0553 /* UIKit.framework */; };
@@ -37,6 +40,9 @@
 /* Begin PBXFileReference section */
 		E3243058186F80A000B8E43A /* TouchTheButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTheButtonViewController.h; sourceTree = "<group>"; };
 		E3243059186F80A000B8E43A /* TouchTheButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchTheButtonViewController.m; sourceTree = "<group>"; };
+		E35DD68F1870D2DB002A4C88 /* BTbackgroundimages.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BTbackgroundimages.jpg; sourceTree = "<group>"; };
+		E35DD6901870D2DB002A4C88 /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
+		E35DD6911870D2DB002A4C88 /* whitebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitebutton.png; sourceTree = "<group>"; };
 		E3E63A4418611CEC004E0553 /* ButtonTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E63A4718611CEC004E0553 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3E63A4918611CEC004E0553 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,6 +96,16 @@
 			name = TheGame;
 			sourceTree = "<group>";
 		};
+		E35DD68E1870D2DB002A4C88 /* buttonTap */ = {
+			isa = PBXGroup;
+			children = (
+				E35DD68F1870D2DB002A4C88 /* BTbackgroundimages.jpg */,
+				E35DD6901870D2DB002A4C88 /* red_button.png */,
+				E35DD6911870D2DB002A4C88 /* whitebutton.png */,
+			);
+			path = buttonTap;
+			sourceTree = "<group>";
+		};
 		E3E63A3B18611CEC004E0553 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +153,7 @@
 		E3E63A4E18611CEC004E0553 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E35DD68E1870D2DB002A4C88 /* buttonTap */,
 				E3E63A4F18611CEC004E0553 /* ButtonTap-Info.plist */,
 				E3E63A5018611CEC004E0553 /* InfoPlist.strings */,
 				E3E63A5318611CEC004E0553 /* main.m */,
@@ -241,8 +258,11 @@
 			files = (
 				E3E63A5E18611CEC004E0553 /* Main_iPad.storyboard in Resources */,
 				E3E63A6318611CEC004E0553 /* Images.xcassets in Resources */,
+				E35DD6921870D2DB002A4C88 /* BTbackgroundimages.jpg in Resources */,
 				E3E63A5B18611CEC004E0553 /* Main_iPhone.storyboard in Resources */,
 				E3E63A5218611CEC004E0553 /* InfoPlist.strings in Resources */,
+				E35DD6931870D2DB002A4C88 /* red_button.png in Resources */,
+				E35DD6941870D2DB002A4C88 /* whitebutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

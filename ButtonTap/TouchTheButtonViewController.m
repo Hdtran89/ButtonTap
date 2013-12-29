@@ -47,7 +47,7 @@
 }
 -(void)gamePlay
 {
-    seconds = 30;
+    seconds = 15;
     count = 0;
     
     time.text = [NSString stringWithFormat:@"Time: %li",seconds];
@@ -99,12 +99,6 @@
             break;
     }
 }
--(void)saveScore
-{
-    highscore  = count;
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:highscore] forKey:@"HighScore"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-}
+
 
 @end
