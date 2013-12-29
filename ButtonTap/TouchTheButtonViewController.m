@@ -72,8 +72,7 @@
                                                         message:[NSString stringWithFormat:@"Your score is: %li",count]
                                                        delegate:self
                                               cancelButtonTitle:@"Play Again"
-                                              otherButtonTitles:@"Main Menu"
-                                                               ,nil];
+                                              otherButtonTitles:@"Back to Save Score",@"Main Menu",nil];
         [alert show];
     }
     
@@ -86,6 +85,8 @@
             [self gamePlay];
             break;
         case 1:
+            break;
+        case 2:
             [self dismissModalViewControllerAnimated:YES];
             break;
         default:
