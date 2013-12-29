@@ -12,10 +12,10 @@
 {
     IBOutlet UILabel *scoreCounter;
     IBOutlet UILabel *time;
-    NSInteger count;
+    int count;
     NSInteger seconds;
     NSTimer * timer;
-    NSInteger highscore;
+    int highscore;
     
 }
 -(void)subtractTime;

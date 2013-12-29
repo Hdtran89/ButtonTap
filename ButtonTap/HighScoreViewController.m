@@ -27,7 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.saveHighscore = [[NSMutableArray alloc]initWithObjects:@"HighScore",nil];
+    
+    highscore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
+    
+    self.saveHighscore = [[NSMutableArray alloc]initWithObjects:@"Name" ,@"HighScore",nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,30 +45,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [self.saveHighscore count ];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"listOfScore";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    highscore.label
+    cell.textLabel.text = [[self.saveHighscore objectAtIndex:indexPath.row]objectForKey:@"Name"];
+    cell.detailTextLabel.text = [[self.saveHighscore objectAtIndex:indexPath.row]objectForKey:@"Highscore"];
     
     return cell;
 }
 
--(void)retrieveHighScore
-{
-    highscore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
-}
+
 @end

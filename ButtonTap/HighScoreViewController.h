@@ -10,6 +10,6 @@
 
 @interface HighScoreViewController : UITableViewController
 {
-    NSInteger highscore;
+    int highscore;
 }
 @end
