@@ -21,19 +21,24 @@
 }
 +(NSArray *)getTopHighScore:(NSUInteger)numberOfScores
 {
-    PFQuery *query = [[PFQuery alloc]initWithClassName:@"HighScore"];
-    query.limit = [NSNumber numberWithUnsignedInteger:numberOfScores];
-    query.order = @"-score";
-    
     NSMutableArray *highScoreObjects = [[NSMutableArray alloc]initWithCapacity:numberOfScores];
     
     NSUInteger i = 0;
-    
-    for (PFObject *object in object)
+    PFQuery *query = [PFQuery queryWithClassName:@"ObjectSavedToParse"];
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // Results were successfully found, looking first on the
+            // network and then on disk.
+        } else {
+            // The network was inaccessible and we have no cached data for
+            // this query.
+        }
+    }];
+    for (i=0; i<numberOfScores; i++)
     {
-        Highscore * highScore = [[Highscore alloc]initWithName:[object objectForKey:@"Name"] andScore:[object objectForKey:@"Score"]];
+        Highscore * highScore = [[Highscore alloc]initWithName:[objects objectForKey:@"Name"] andScore:[objects objectForKey:@"Score"]];
         [highScoreObjects insertObject:highScore atIndex:i];
-        i++;
     }
     
     return highScoreObjects;
