@@ -1,5 +1,5 @@
 //
-//  HighScoreViewController.h
+//  RecordNameViewController.h
 //  ButtonTap
 //
 //  Created by Hieu Tran on 12/28/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HighScoreViewController : UITableViewController
-{
-    NSInteger highscore;
-}
+@interface RecordNameViewController : UITableViewController
+
 @end

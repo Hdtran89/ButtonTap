@@ -41,6 +41,7 @@
 {
     count++;
     scoreCounter.text = [NSString stringWithFormat:@"Score: %li", count];
+
 }
 -(void)gamePlay
 {
@@ -70,26 +71,31 @@
                                                         message:[NSString stringWithFormat:@"Your score is: %li",count]
                                                        delegate:self
                                               cancelButtonTitle:@"Play Again"
-                                              otherButtonTitles:@"Main Menu",
-                                                                @"Record Score",nil];
+                                              otherButtonTitles:@"Main Menu"
+                                                               ,nil];
         [alert show];
     }
     
 }
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    
     switch (buttonIndex) {
         case 0:
             [self gamePlay];
             break;
         case 1:
             [self dismissModalViewControllerAnimated:YES];
-        case 2:
-            [self ]
+            break;
         default:
             break;
     }
 }
-
+-(void)saveScore
+{
+    highscore  = count;
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:highscore] forKey:@"HighScore"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 @end

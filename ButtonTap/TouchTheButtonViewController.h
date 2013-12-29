@@ -15,6 +15,7 @@
     NSInteger count;
     NSInteger seconds;
     NSTimer * timer;
+    NSInteger highscore;
     
 }
 -(void)subtractTime;
