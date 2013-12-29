@@ -30,7 +30,7 @@
     
     highscore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
     
-    self.saveHighscore = [[NSMutableArray alloc]initWithObjects:@"Name" ,@"HighScore",nil];
+    self.saveHighscore = [[NSMutableArray alloc] init];
     
     
 }

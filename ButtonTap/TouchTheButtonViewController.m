@@ -29,6 +29,7 @@
     [super viewDidLoad];
     [self gamePlay];
 	// Do any additional setup after loading the view.
+    //NSLog(@"%i",highscore);
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,6 +97,7 @@
     highscore  = count;
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:highscore] forKey:@"HighScore"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
 }
 
 @end
