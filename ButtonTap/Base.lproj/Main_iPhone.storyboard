@@ -193,6 +193,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="redButton:" destination="jBF-Vl-VgD" eventType="touchUpInside" id="oM7-ku-L1g"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-bu-mlH">
                                 <rect key="frame" x="200" y="72" width="100" height="21"/>
@@ -223,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="695" y="-1665"/>
         </scene>
-        <!--View Controller-->
+        <!--Level2 View Controller - Level2PTB-->
         <scene sceneID="KOz-mf-L0z">
             <objects>
-                <viewController id="LkP-5w-ikq" sceneMemberID="viewController">
+                <viewController title="Level2PTB" id="LkP-5w-ikq" customClass="PTBLevel2ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sdj-ic-zgm"/>
                         <viewControllerLayoutGuide type="bottom" id="SJ0-gE-ZR5"/>
@@ -258,7 +261,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Level: 1">
+                                    <fragment content="Level: 2">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Optima-BoldItalic"/>
@@ -303,7 +306,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Mission:  Tap two button, One and Two 50x to unlock the next level">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Optima-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -311,18 +314,32 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lz-Cm-P1R">
-                                <rect key="frame" x="74" y="238" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1lz-Cm-P1R">
+                                <rect key="frame" x="52" y="246" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="One" backgroundImage="whitebutton.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="One">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Optima-ExtraBlack"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pL1-Z9-fW6">
-                                <rect key="frame" x="200" y="195" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pL1-Z9-fW6">
+                                <rect key="frame" x="178" y="161" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Two">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Two" backgroundImage="blackbutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Two">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Optima-ExtraBlack"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                             </button>
                         </subviews>
@@ -458,6 +475,7 @@
     </scenes>
     <resources>
         <image name="BTbackgroundimages.jpg" width="225" height="225"/>
+        <image name="blackbutton.png" width="300" height="300"/>
         <image name="red_button.png" width="1979" height="1979"/>
         <image name="whitebutton.png" width="300" height="300"/>
     </resources>

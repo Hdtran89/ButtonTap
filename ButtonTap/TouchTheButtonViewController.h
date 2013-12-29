@@ -12,14 +12,13 @@
 {
     IBOutlet UILabel *scoreCounter;
     IBOutlet UILabel *time;
-    int count;
-    NSInteger seconds;
-    NSTimer * timer;
-    int highscore;
+//    int count;
+//    NSInteger seconds;
+//    NSTimer * timer;
     
 }
--(void)subtractTime;
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
--(void)gamePlay;
+//-(void)subtractTime;
+//-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+//-(void)gamePlay;
 -(IBAction)redButton:(id)sender;
 @end

@@ -11,6 +11,9 @@
 		E35DD6921870D2DB002A4C88 /* BTbackgroundimages.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E35DD68F1870D2DB002A4C88 /* BTbackgroundimages.jpg */; };
 		E35DD6931870D2DB002A4C88 /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E35DD6901870D2DB002A4C88 /* red_button.png */; };
 		E35DD6941870D2DB002A4C88 /* whitebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = E35DD6911870D2DB002A4C88 /* whitebutton.png */; };
+		E35DD6961870DAE3002A4C88 /* blackbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = E35DD6951870DAE3002A4C88 /* blackbutton.png */; };
+		E35DD69A1870DDE0002A4C88 /* PTBLevel2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E35DD6991870DDE0002A4C88 /* PTBLevel2ViewController.m */; };
+		E35DD69D1870E010002A4C88 /* PressTheButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E35DD69C1870E010002A4C88 /* PressTheButton.m */; };
 		E3E63A4818611CEC004E0553 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4718611CEC004E0553 /* Foundation.framework */; };
 		E3E63A4A18611CEC004E0553 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4918611CEC004E0553 /* CoreGraphics.framework */; };
 		E3E63A4C18611CEC004E0553 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E63A4B18611CEC004E0553 /* UIKit.framework */; };
@@ -43,6 +46,11 @@
 		E35DD68F1870D2DB002A4C88 /* BTbackgroundimages.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BTbackgroundimages.jpg; sourceTree = "<group>"; };
 		E35DD6901870D2DB002A4C88 /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
 		E35DD6911870D2DB002A4C88 /* whitebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitebutton.png; sourceTree = "<group>"; };
+		E35DD6951870DAE3002A4C88 /* blackbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackbutton.png; sourceTree = "<group>"; };
+		E35DD6981870DDE0002A4C88 /* PTBLevel2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTBLevel2ViewController.h; sourceTree = "<group>"; };
+		E35DD6991870DDE0002A4C88 /* PTBLevel2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTBLevel2ViewController.m; sourceTree = "<group>"; };
+		E35DD69B1870E010002A4C88 /* PressTheButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PressTheButton.h; path = modal/PressTheButton.h; sourceTree = "<group>"; };
+		E35DD69C1870E010002A4C88 /* PressTheButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PressTheButton.m; path = modal/PressTheButton.m; sourceTree = "<group>"; };
 		E3E63A4418611CEC004E0553 /* ButtonTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E63A4718611CEC004E0553 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3E63A4918611CEC004E0553 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,11 +107,30 @@
 		E35DD68E1870D2DB002A4C88 /* buttonTap */ = {
 			isa = PBXGroup;
 			children = (
+				E35DD6951870DAE3002A4C88 /* blackbutton.png */,
 				E35DD68F1870D2DB002A4C88 /* BTbackgroundimages.jpg */,
 				E35DD6901870D2DB002A4C88 /* red_button.png */,
 				E35DD6911870D2DB002A4C88 /* whitebutton.png */,
 			);
 			path = buttonTap;
+			sourceTree = "<group>";
+		};
+		E35DD6971870DDB1002A4C88 /* PTBLevel2 */ = {
+			isa = PBXGroup;
+			children = (
+				E35DD6981870DDE0002A4C88 /* PTBLevel2ViewController.h */,
+				E35DD6991870DDE0002A4C88 /* PTBLevel2ViewController.m */,
+			);
+			name = PTBLevel2;
+			sourceTree = "<group>";
+		};
+		E35DD69E1870E021002A4C88 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				E35DD69B1870E010002A4C88 /* PressTheButton.h */,
+				E35DD69C1870E010002A4C88 /* PressTheButton.m */,
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 		E3E63A3B18611CEC004E0553 = {
@@ -139,11 +166,13 @@
 		E3E63A4D18611CEC004E0553 /* ButtonTap */ = {
 			isa = PBXGroup;
 			children = (
+				E35DD6971870DDB1002A4C88 /* PTBLevel2 */,
 				E3243050186F7F2800B8E43A /* TheGame */,
 				E3E63A5618611CEC004E0553 /* AppDelegate.h */,
 				E3E63A5718611CEC004E0553 /* AppDelegate.m */,
-				E3E63A5918611CEC004E0553 /* Main_iPhone.storyboard */,
 				E3E63A5C18611CEC004E0553 /* Main_iPad.storyboard */,
+				E3E63A5918611CEC004E0553 /* Main_iPhone.storyboard */,
+				E35DD69E1870E021002A4C88 /* Modal */,
 				E3E63A6218611CEC004E0553 /* Images.xcassets */,
 				E3E63A4E18611CEC004E0553 /* Supporting Files */,
 			);
@@ -259,6 +288,7 @@
 				E3E63A5E18611CEC004E0553 /* Main_iPad.storyboard in Resources */,
 				E3E63A6318611CEC004E0553 /* Images.xcassets in Resources */,
 				E35DD6921870D2DB002A4C88 /* BTbackgroundimages.jpg in Resources */,
+				E35DD6961870DAE3002A4C88 /* blackbutton.png in Resources */,
 				E3E63A5B18611CEC004E0553 /* Main_iPhone.storyboard in Resources */,
 				E3E63A5218611CEC004E0553 /* InfoPlist.strings in Resources */,
 				E35DD6931870D2DB002A4C88 /* red_button.png in Resources */,
@@ -281,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E35DD69D1870E010002A4C88 /* PressTheButton.m in Sources */,
 				E3E63A5818611CEC004E0553 /* AppDelegate.m in Sources */,
 				E324305A186F80A000B8E43A /* TouchTheButtonViewController.m in Sources */,
 				E3E63A5418611CEC004E0553 /* main.m in Sources */,
+				E35DD69A1870DDE0002A4C88 /* PTBLevel2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
