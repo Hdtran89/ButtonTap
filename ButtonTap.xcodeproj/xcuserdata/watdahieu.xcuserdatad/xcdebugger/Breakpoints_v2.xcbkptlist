@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ButtonTap/TouchTheButtonViewController.h"
-            timestampString = "409974888.137652"
+            timestampString = "410056537.282755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "@interface TouchTheButtonViewController"
             landmarkType = "2">
          </BreakpointContent>
@@ -48,6 +48,22 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "+saveHighScore:withName:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ButtonTap/TouchTheButtonViewController.m"
+            timestampString = "410058746.482773"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-redButton:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

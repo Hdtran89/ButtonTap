@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="695" y="-1665"/>
         </scene>
-        <!--Level2 View Controller - Level2PTB-->
+        <!--Level2 View Controller-->
         <scene sceneID="KOz-mf-L0z">
             <objects>
-                <viewController title="Level2PTB" id="LkP-5w-ikq" customClass="PTBLevel2ViewController" sceneMemberID="viewController">
+                <viewController id="LkP-5w-ikq" customClass="PTBLevel2ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sdj-ic-zgm"/>
                         <viewControllerLayoutGuide type="bottom" id="SJ0-gE-ZR5"/>
@@ -345,10 +345,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RgE-d0-bOX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUY-vQ-cLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256" y="-1665"/>
+            <point key="canvasLocation" x="1194" y="-1665"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xxd-ra-alz">
@@ -485,6 +486,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Fg2-mV-LKn"/>
+        <segue reference="ZhT-jk-wkm"/>
     </inferredMetricsTieBreakers>
 </document>
