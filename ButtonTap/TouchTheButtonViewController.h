@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class PTBLevel2ViewController;
 
 @interface TouchTheButtonViewController : UIViewController
 {

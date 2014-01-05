@@ -30,7 +30,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="jBF-Vl-VgD" kind="modal" modalTransitionStyle="crossDissolve" id="AfU-Nr-r9e"/>
+                                    <segue destination="jBF-Vl-VgD" kind="modal" modalTransitionStyle="flipHorizontal" id="AfU-Nr-r9e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aew-fX-o8P">
@@ -65,7 +65,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="v6l-iR-iIU" kind="modal" modalTransitionStyle="crossDissolve" id="NRw-uA-w7h"/>
+                                    <segue destination="v6l-iR-iIU" kind="modal" modalTransitionStyle="flipHorizontal" id="NRw-uA-w7h"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikD-0y-CJv">
@@ -90,7 +90,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Press The Button">
+                                    <fragment content="Button Tap">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="30" name="Optima-Bold"/>
@@ -170,7 +170,7 @@
                                 <rect key="frame" x="20" y="404" width="280" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Mission:  Tap the button 100x to unlock the next level">
+                                    <fragment content="Mission:  Press the button. If score is atleast 100 unlock the next level">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Optima-Regular"/>
@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="695" y="-1665"/>
         </scene>
-        <!--Level2 View Controller-->
+        <!--Level2 View Controller - PTBLevel2-->
         <scene sceneID="KOz-mf-L0z">
             <objects>
-                <viewController id="LkP-5w-ikq" customClass="PTBLevel2ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PTBLevel2" title="PTBLevel2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LkP-5w-ikq" customClass="PTBLevel2ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sdj-ic-zgm"/>
                         <viewControllerLayoutGuide type="bottom" id="SJ0-gE-ZR5"/>
@@ -301,10 +301,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="AgG-PE-YpS">
-                                <rect key="frame" x="20" y="405" width="280" height="55"/>
+                                <rect key="frame" x="20" y="405" width="280" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Mission:  Tap two button, One and Two 50x to unlock the next level">
+                                    <fragment content="Mission:  Press two button, One and Two. If score is atleast 50 unlock the next level">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Optima-Regular"/>
@@ -364,9 +364,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twq-hi-SwQ">
-                                <rect key="frame" x="143" y="430" width="35" height="30"/>
+                                <rect key="frame" x="120" y="380" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" backgroundImage="back.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -375,10 +375,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="212" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-DY-2at">
-                                <rect key="frame" x="63" y="167" width="212" height="145"/>
+                                <rect key="frame" x="54" y="198" width="212" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="You have 15 seconds to follow the instruction of each level. Pass you will move on to the next level.">
+                                    <fragment>
+                                        <string key="content">You have 15 seconds to follow the instruction of each level. Pass; you will move on to the next level, and if you try to click next level without passing you will start over.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="Optima-Regular"/>
@@ -425,14 +426,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGR-mV-5Rv">
-                                <rect key="frame" x="143" y="430" width="35" height="30"/>
+                                <rect key="frame" x="118" y="380" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" backgroundImage="back.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="ZhT-jk-wkm"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="coverVertical" id="ZhT-jk-wkm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="219" translatesAutoresizingMaskIntoConstraints="NO" id="1yg-Jg-cQh">
@@ -476,6 +477,7 @@
     </scenes>
     <resources>
         <image name="BTbackgroundimages.jpg" width="225" height="225"/>
+        <image name="back.png" width="512" height="512"/>
         <image name="blackbutton.png" width="300" height="300"/>
         <image name="red_button.png" width="1979" height="1979"/>
         <image name="whitebutton.png" width="300" height="300"/>
@@ -486,6 +488,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZhT-jk-wkm"/>
+        <segue reference="Fg2-mV-LKn"/>
     </inferredMetricsTieBreakers>
 </document>

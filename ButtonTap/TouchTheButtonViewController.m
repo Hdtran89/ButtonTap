@@ -49,7 +49,35 @@
 
 }
 
--(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    switch (buttonIndex)
+//    {
+//        case 0:
+//            [self gamePlay];
+//            break;
+//        case 1:
+//            if (score >= 10)
+//            {
+//             
+//                PTBLevel2ViewController *mvc = [[PTBLevel2ViewController alloc] initWithNibName:@"PTBLevel2" bundle:nil];
+//                self.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
+//                [self presentViewController:mvc animated:YES completion:nil];
+//                
+//            }
+//            else
+//            {
+//                [self dismissModalViewControllerAnimated:YES];
+//            }
+//            break;
+//        case 2:
+//            [self dismissModalViewControllerAnimated:YES];
+//            break;
+//        default:
+//            break;
+//    }
+//}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     switch (buttonIndex)
     {
@@ -57,15 +85,20 @@
             [self gamePlay];
             break;
         case 1:
-            if (score >= 100)
+            if (score >= 10)
             {
-             
-                PTBLevel2ViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@""];
-                [self.navigationController pushViewController:vc animated:YES];
+                UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"PTBLevel2"
+                                                              bundle:nil];
+                PTBLevel2ViewController * vc = [sb instantiateViewControllerWithIdentifier:@"PTBLevel2"];
+                //PTBLevel2ViewController *mvc = [[PTBLevel2ViewController alloc] initWithNibName:nil bundle:nil];
+                self.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
+                [self presentModalViewController:vc animated:YES];
                 
             }
             else
-            [self dismissModalViewControllerAnimated:YES]
+            {
+                [self dismissModalViewControllerAnimated:YES];
+            }
             break;
         case 2:
             [self dismissModalViewControllerAnimated:YES];
@@ -74,7 +107,6 @@
             break;
     }
 }
-
 -(void)gamePlay
 {
     seconds = 15;
