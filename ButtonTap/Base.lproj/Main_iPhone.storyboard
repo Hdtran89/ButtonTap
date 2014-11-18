@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -30,7 +30,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="jBF-Vl-VgD" kind="modal" modalTransitionStyle="flipHorizontal" id="AfU-Nr-r9e"/>
+                                    <segue destination="jBF-Vl-VgD" kind="modal" identifier="goLevelOne" modalTransitionStyle="flipHorizontal" id="AfU-Nr-r9e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aew-fX-o8P">
@@ -48,7 +48,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="XRG-1U-VXd" kind="modal" modalTransitionStyle="flipHorizontal" id="etx-l3-K7s"/>
+                                    <segue destination="XRG-1U-VXd" kind="modal" identifier="goHowToPlay" modalTransitionStyle="flipHorizontal" id="etx-l3-K7s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-Pv-SY5">
@@ -65,7 +65,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="v6l-iR-iIU" kind="modal" modalTransitionStyle="flipHorizontal" id="NRw-uA-w7h"/>
+                                    <segue destination="v6l-iR-iIU" kind="modal" identifier="goAbout" modalTransitionStyle="flipHorizontal" id="NRw-uA-w7h"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikD-0y-CJv">
@@ -170,7 +170,7 @@
                                 <rect key="frame" x="20" y="404" width="280" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Mission:  Press the button. If score is atleast 100 unlock the next level">
+                                    <fragment content="Mission:  Press the button. If score is greater than 100 unlock the next level">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Optima-Regular"/>
@@ -220,16 +220,18 @@
                         <outlet property="scoreCounter" destination="BU3-Ui-p1h" id="i7d-tB-s2s"/>
                         <outlet property="time" destination="gPc-3w-urm" id="sMo-Rb-lSQ"/>
                         <outlet property="timer" destination="gPc-3w-urm" id="UHG-Zl-YZf"/>
+                        <segue destination="LkP-5w-ikq" kind="modal" identifier="goLevelTwo" modalTransitionStyle="crossDissolve" id="1cJ-Oh-vxk"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="oneToMenu" modalTransitionStyle="crossDissolve" id="MhC-F0-3Jj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYM-JW-BG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="695" y="-1665"/>
+            <point key="canvasLocation" x="704" y="-1665"/>
         </scene>
-        <!--Level2 View Controller - PTBLevel2-->
+        <!--Level2 View Controller-->
         <scene sceneID="KOz-mf-L0z">
             <objects>
-                <viewController storyboardIdentifier="PTBLevel2" title="PTBLevel2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LkP-5w-ikq" customClass="PTBLevel2ViewController" sceneMemberID="viewController">
+                <viewController id="LkP-5w-ikq" customClass="PTBLevel2ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sdj-ic-zgm"/>
                         <viewControllerLayoutGuide type="bottom" id="SJ0-gE-ZR5"/>
@@ -300,11 +302,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="AgG-PE-YpS">
-                                <rect key="frame" x="20" y="405" width="280" height="61"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="AgG-PE-YpS">
+                                <rect key="frame" x="20" y="405" width="268" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Mission:  Press two button, One and Two. If score is atleast 50 unlock the next level">
+                                    <fragment content="Mission:  Press One then Two in sequence. If score is greater than 50 unlock the next level">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Optima-Regular"/>
@@ -327,6 +329,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="whiteButton:" destination="LkP-5w-ikq" eventType="touchUpInside" id="nnz-yo-h0U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pL1-Z9-fW6">
                                 <rect key="frame" x="178" y="161" width="100" height="100"/>
@@ -341,11 +346,20 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="blackButton:" destination="LkP-5w-ikq" eventType="touchUpInside" id="RCe-8O-yxv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="RgE-d0-bOX"/>
+                    <connections>
+                        <outlet property="blackButton" destination="pL1-Z9-fW6" id="HRL-FW-CST"/>
+                        <outlet property="scoreCounter" destination="fF5-uj-MtD" id="hi7-nB-OqW"/>
+                        <outlet property="time" destination="roG-jw-Ouq" id="M17-au-N0s"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="twoToMenu" modalTransitionStyle="crossDissolve" id="YNQ-uY-wEf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUY-vQ-cLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -488,6 +502,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Fg2-mV-LKn"/>
+        <segue reference="YNQ-uY-wEf"/>
     </inferredMetricsTieBreakers>
 </document>

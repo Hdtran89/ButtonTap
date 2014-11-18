@@ -49,59 +49,27 @@
 
 }
 
-//-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-//{
-//    switch (buttonIndex)
-//    {
-//        case 0:
-//            [self gamePlay];
-//            break;
-//        case 1:
-//            if (score >= 10)
-//            {
-//             
-//                PTBLevel2ViewController *mvc = [[PTBLevel2ViewController alloc] initWithNibName:@"PTBLevel2" bundle:nil];
-//                self.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
-//                [self presentViewController:mvc animated:YES completion:nil];
-//                
-//            }
-//            else
-//            {
-//                [self dismissModalViewControllerAnimated:YES];
-//            }
-//            break;
-//        case 2:
-//            [self dismissModalViewControllerAnimated:YES];
-//            break;
-//        default:
-//            break;
-//    }
-//}
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+
     switch (buttonIndex)
     {
         case 0:
             [self gamePlay];
             break;
         case 1:
-            if (score >= 10)
+            if (score < 10)
             {
-                UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"PTBLevel2"
-                                                              bundle:nil];
-                PTBLevel2ViewController * vc = [sb instantiateViewControllerWithIdentifier:@"PTBLevel2"];
-                //PTBLevel2ViewController *mvc = [[PTBLevel2ViewController alloc] initWithNibName:nil bundle:nil];
-                self.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
-                [self presentModalViewController:vc animated:YES];
+                [self performSegueWithIdentifier:@"oneToMenu" sender:self];
                 
             }
             else
             {
-                [self dismissModalViewControllerAnimated:YES];
+                [self performSegueWithIdentifier:@"goLevelTwo" sender:self];
             }
             break;
         case 2:
-            [self dismissModalViewControllerAnimated:YES];
+                [self performSegueWithIdentifier:@"oneToMenu" sender:self];
             break;
         default:
             break;
